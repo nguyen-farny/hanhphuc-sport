@@ -18,6 +18,11 @@ $("a[href^=#]").click(function(event) {
 	document.location.hash = $(this).attr("href");
 	$("#content").children().fadeOut();
 	$($(this).attr("href")).fadeIn();
+
+	// if responsive, hide menu
+	if($("#menu-icon").css("width") != "0px") {
+		$("#menu ul").fadeOut();
+	}
 });
 
 // burger menu -------------------------------

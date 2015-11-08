@@ -16,7 +16,7 @@ body
 	color: #4682B4;	
 }
 
-.container
+#container
 {
 	max-width: 1000px; 
 	margin: auto; 
@@ -32,6 +32,7 @@ body
 	border-collapse: separate;
 	border-spacing: 20px 0px;
 	min-height: 500px;
+	text-align: left;
 }
 
 header
@@ -55,10 +56,9 @@ header img
 	height: 0px; 
 	visibility: hidden; 
 	float: right; /* sans float, il fait une ligne blanche */
-	/*
 	position: absolute;
 	top: 0px;
-	*/
+	right: 0px;
 }
 
 #menu ul
@@ -70,7 +70,7 @@ header img
     padding: 0px;
 }
 
-#menu li 
+#menu a
 {
 	margin: auto;
 	margin-top:10px;
@@ -81,6 +81,7 @@ header img
 	padding-top: 10px; 
 	padding-bottom: 0px; 
 	border-radius: 8px;
+	display: block;
 }
 	
 li:first-child
@@ -88,16 +89,21 @@ li:first-child
 	margin-top:0px;
 }
 
-nav a
+a
 {
 	color: white; 
 	text-decoration: none; 
 }
 
 
-nav a:hover /*quand la souris passe dessus*/
+a:hover /*quand la souris passe dessus*/
 {
 	color: #FAEBD7;
+}
+
+#menu a:hover
+{
+	opacity: 0.8;
 }
 
 #menu
@@ -148,18 +154,15 @@ nav a:hover /*quand la souris passe dessus*/
 	height: 80px;  
 	margin: 1px; 
 	min-width: 70px;
-/* 	border: 1px solid grey;  */
 	background: #B0C4DE; 
 	text-align: center;
 	color: white;
-	vertical-align: middle;
-	
+	vertical-align: middle;	
 }
 
 h3
 {
-/* 	background:#003399;  */
-	color:  #FFFFE0; 
+	color:  #FFFFD5; 
 	margin: 0px; 
 	padding: 2px; 
 	border-bottom: white; 
@@ -173,12 +176,13 @@ footer
 
 @media screen and (max-width: 700px)
 {
-	.container
+	#container
 	{
 		min-width: 342px; 
 		height: 100%;
 		margin: 0; 
 	}
+
 	#sous_container
 	{
 		display: block; 
@@ -186,14 +190,14 @@ footer
 
 	header img
 	{
-		display: table-cell; 
+		margin: auto auto;
+		background: rgba(255, 255, 255, 0.5);
+		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 	}
-	
 	
 	footer
 	{
 		display: table-cell; 
-
 	}
 
 	#menu
@@ -211,12 +215,14 @@ footer
 		height: 50px;
 		padding: 10px 10px 0px 0px;
 		float: none;
-		/* position: absolute; /* par dessus sans décaler*/
-		/* right: 10px; */ 
 	}
 	
 	#menu ul
 	{
+		position: absolute;
+		top: 50px;
+		right: 0px;
+
 		display: none;
 		list-style-type: none;  
 		padding: 10px 10px 10px 10px;  
@@ -224,14 +230,8 @@ footer
 		margin-bottom: 0px;
 	}	
 	
-	#menu li 
-	{
-	}
-	
-	
 	nav li 
 	{
 		display: block;
 	}
-
 }
