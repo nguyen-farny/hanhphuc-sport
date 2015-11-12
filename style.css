@@ -116,7 +116,7 @@ a:hover /*quand la souris passe dessus*/
 	text-align: center;
 }
 
-#jssor_1, #products, #services, #findus
+#home, #products, #services, #findus
 { 
 	vertical-align: top; 
 	display:  table-cell;
@@ -124,10 +124,6 @@ a:hover /*quand la souris passe dessus*/
 	padding: 5px; 
 	visibility: hidden;
 	width: 100%;
-}
-
-#jssor_1
-{
 }
 
 #products
@@ -149,11 +145,10 @@ a:hover /*quand la souris passe dessus*/
 
 #products nav
 {
-	display: inline-table; 
-	width: 30px;
-	height: 80px;  
-	margin: 1px; 
-	min-width: 70px;
+	display: inline-block; 
+	width: 130px;
+	height: 130px;  
+	margin: 3px; 
 	background: #B0C4DE; 
 	text-align: center;
 	color: white;

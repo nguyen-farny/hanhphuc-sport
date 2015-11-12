@@ -1,3 +1,10 @@
+var images = 
+	[
+		"chaussures.png", 
+		"sac.png", 
+		"psg.png"
+	];
+
 // qd la page est chargée("ready"), ça cache les 2 suivants
 $( document ).ready(function() {	
 
@@ -7,44 +14,51 @@ $( document ).ready(function() {
 	if($(document.location.hash).length)
 		$(document.location.hash).show();
 	else
-		$("#jssor_1").show();
+		$("#home").show();
 	
-});
-
-// page ------------------------------------
-
-$("a[href^=#]").click(function(event) {
-	event.preventDefault();
-	document.location.hash = $(this).attr("href");
-	$("#content").children().fadeOut();
-	$($(this).attr("href")).fadeIn();
-
-	// if responsive, hide menu
-	if($("#menu-icon").css("width") != "0px") {
-		$("#menu ul").fadeOut();
+	for(var index = 0 ; index < images.length; index++)
+	{
+		var image = images[index];
+		$("div[data-u=slides]").append('<div data-p="225.00" style="display: none;"><img data-u="image" src="'+image+'" /></div>');
 	}
+
+	// page ------------------------------------
+
+	$("a[href^=#]").click(function(event) {
+		event.preventDefault();
+		document.location.hash = $(this).attr("href");
+		$("#content").children().fadeOut();
+		$($(this).attr("href")).fadeIn();
+
+		// if responsive, hide menu
+		if($("#menu-icon").css("width") != "0px") {
+			$("#menu ul").fadeOut();
+		}
+	});
+
+	// burger menu -------------------------------
+
+	$("#menu-icon").click(function() {
+		// 1st time 
+		if($("#menu ul").css("display") == "none")
+			$("#menu ul").css("display", "inline-block");
+		else
+			$("#menu ul").fadeToggle();
+	});
+				
+
+	$(window).resize(function() 
+	{
+		if($("#menu-icon").css("width") == "0px") {
+			$("#menu ul").fadeIn();
+		}
+		else {
+			$("#menu ul").hide();
+		}
+	});
+
 });
 
-// burger menu -------------------------------
-
-$("#menu-icon").click(function() {
-	// 1st time 
-	if($("#menu ul").css("display") == "none")
-		$("#menu ul").css("display", "inline-block");
-	else
-		$("#menu ul").fadeToggle();
-});
-			
-
-$(window).resize(function() 
-{
-	if($("#menu-icon").css("width") == "0px") {
-		$("#menu ul").fadeIn();
-	}
-	else {
-		$("#menu ul").hide();
-	}
-});
 
 // slider --------------------------------------
 
@@ -63,7 +77,7 @@ jQuery(document).ready(function ($)
 	  }
 	};
 	
-	var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+	var jssor_1_slider = new $JssorSlider$("home", jssor_1_options);
 	
 	//responsive code begin
 	//you can remove responsive code if you don't want the slider scales while window resizes
