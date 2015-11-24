@@ -7,7 +7,7 @@ html,body
 
 body 
 {
-	font-family: comic sans ms; 
+	font-family: times new romans; 
 	background-image: url('border-blue.jpg') ;
 	background-attachment: fixed ;
 	background-repeat: no-repeat ;
@@ -153,6 +153,7 @@ a:hover /*quand la souris passe dessus*/
 	text-align: center;
 	color: white;
 	vertical-align: middle;	
+	border-radius: 8px;
 }
 
 h3
@@ -165,8 +166,13 @@ h3
 
 footer
 {
-	color: grey; 
+	color: #4682B4; 
 	word-spacing: 10px;
+}
+
+footer a 
+{
+	color: #2460A2; 
 }
 
 @media screen and (max-width: 700px)
