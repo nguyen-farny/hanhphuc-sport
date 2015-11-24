@@ -20,7 +20,7 @@ body
 {
 	max-width: 1000px; 
 	margin: auto; 
- 	margin-top: 120px; 
+ 	margin-top: 60px; 
  	margin-bottom: 0px;
 	padding: 10px;
 	text-align: center;
@@ -70,7 +70,7 @@ header img
     padding: 0px;
 }
 
-#menu a
+#menu li a
 {
 	margin: auto;
 	margin-top:10px;
@@ -175,11 +175,21 @@ footer a
 	color: #2460A2; 
 }
 
+.lang
+{
+	margin-top: 20px;
+}
+
+.lang img 
+{
+	width: 36px;
+}
+
 @media screen and (max-width: 700px)
 {
 	#container
 	{
-		min-width: 342px; 
+		min-width: 330px; 
 		height: 100%;
 		margin: 0; 
 	}
@@ -187,13 +197,6 @@ footer a
 	#sous_container
 	{
 		display: block; 
-	}
-
-	header img
-	{
-		margin: auto auto;
-		background: rgba(255, 255, 255, 0.5);
-		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 	}
 	
 	footer
@@ -204,8 +207,12 @@ footer a
 	#menu
 	{
 		display: table-cell; 
-		width: 100%; 
 		padding: 5px;
+	}
+	
+	header img
+	{
+		margin: auto;
 	}
 	
 	#menu-icon
@@ -234,5 +241,10 @@ footer a
 	nav li 
 	{
 		display: block;
+	}
+	
+	.lang
+	{
+		bottom: 20px;
 	}
 }

@@ -67,7 +67,7 @@ function SetLang(lang)
 		}
 	}
 
-	var links = $("#menu a[href^=#]");
+	var links = $("#menu li a[href^=#]");
 	for(var i = 0 ; i < links.length ; i++)
 	{
 		var e = links[i];
